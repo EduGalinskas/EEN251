@@ -33,3 +33,8 @@ Ser capaz de desenvolver, solucionar e otimizar necessidades e problemáticas en
 Atualizar a com suas informações do repositório criado, as notas serão lançadas nessa tabela:
 
 https://docs.google.com/spreadsheets/d/1cuKvWHw3hXCjy4WiemzEMh-MFBkMHng-f6sZUBVCWtI/edit#gid=0
+
+## Projeto Embarcados
+ - Computação : https://docs.google.com/document/d/1MGqQORc5Mrjpf5RqscuPMRiYHHizjL8oobVyXl_BjdI/edit?usp=sharing
+ - Eletrônica noturno :
+ - Eletrônica diurno : https://docs.google.com/document/d/1ynDwxlEFBsrbLLvfedd-Gz5xLE5xPjUWzvb7k1kJjwQ/edit?usp=sharing
