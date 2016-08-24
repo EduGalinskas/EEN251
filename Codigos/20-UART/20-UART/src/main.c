@@ -25,6 +25,14 @@
 #define CONF_UART_BAUDRATE 115200		
 #define CONF_UART          CONSOLE_UART
 
+/** 
+ * LEDs
+ */ 
+#define PIN_LED_BLUE	19
+#define PORT_LED_BLUE	PIOA
+#define ID_LED_BLUE		ID_PIOA
+#define MASK_LED_BLUE	(1u << PIN_LED_BLUE)
+
 /************************************************************************/
 /* Configura UART                                                       */
 /************************************************************************/
@@ -67,6 +75,10 @@ int main(void)
 	sysclk_init();
 	board_init();
 
+	/* Configure LED 1 */
+	pmc_enable_periph_clk(ID_LED_BLUE);
+	pio_set_output(PORT_LED_BLUE  , MASK_LED_BLUE	,1,0,0);
+
 	/* Initialize debug console */
 	config_uart();
 	
@@ -85,12 +97,13 @@ int main(void)
 				display_menu();
 				break;
 			case '2':
-				LED_On(0);
+				pio_clear(PORT_LED_BLUE, MASK_LED_BLUE);
 				puts("Led ON \n\r");
 				break;
 			case '3' :
-				LED_Off(0);
+				pio_set(PORT_LED_BLUE, MASK_LED_BLUE);
 				puts("Led OFF \n\r");
+				break;
 			default:
 				printf("Opcao nao definida: %d \n\r", uc_key);
 		}	
